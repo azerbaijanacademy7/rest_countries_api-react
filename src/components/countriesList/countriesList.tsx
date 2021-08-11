@@ -1,4 +1,4 @@
-import React, { Component, ChangeEvent } from "react";
+import React, { Component} from "react";
 import AllCountriesService from "../../core/services/rest-country.service";
 import { NavLink } from "react-router-dom";
 import { ApplicationDto } from "../../interfaces/dtos/application.dto";
@@ -43,7 +43,6 @@ export default class CountriesList extends Component<Props, State> {
       selectedCountry: country,
       selectedIndex: index
     });
-    console.log(this.state.selectedCountry)
   }
 
   render() {

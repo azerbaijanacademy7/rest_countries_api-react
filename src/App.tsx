@@ -5,7 +5,7 @@ import "./App.scss";
 import HomePage from "./pages/home/home";
 import AppStore from "./Store";
 import {Header} from './components/header/Header';
-import {SingleCountry} from './pages/singleCountry/SingleCountry';
+import SingleCountry from './pages/singleCountry/SingleCountry';
 
 @inject("appStore")
 @observer
