@@ -3,7 +3,7 @@ import React from "react";
 import http from "../../core/services/http";
 import "./home.scss";
 import AppStore from "../../Store";
-import CountriesList from '../../components/countriesList/countriesList'
+import CountriesList from "../../components/countriesList/countriesList";
 @inject("appStore")
 @observer
 export default class HomePage extends React.Component<{
@@ -12,30 +12,30 @@ export default class HomePage extends React.Component<{
   componentDidMount() {
     http
       .get("/user?ID=12345")
-      .then(function(response: any) {
+      .then(function (response: any) {
         // handle success
         console.log(response);
       })
-      .catch(function(error: any) {
+      .catch(function (error: any) {
         // handle error
         console.log(error);
       })
-      .finally(function() {
+      .finally(function () {
         // always executed
       });
   }
 
   render() {
-    return ( 
-    <div>
-       <CountriesList/>
-    </div>)
-   
-   
+    return (
+      <div>
+        {/* <div className="input">
+          <input type="text" placeholder="Search for a country..."/>
+        </div> */}
+        <CountriesList />
+      </div>
+    );
   }
 }
-
-
 
 // private applicationService:
 // ApplicationService = new ApplicationService();

@@ -5,6 +5,9 @@ class AllCountriesService {
   getAll() {
     return http.get("/all");
   }
+  get(alpha3Code: string) {
+    return http.get(`/all/${alpha3Code}`);
+  }
 
 //   get(id: string) {
 //     return http.get(`/tutorials/${id}`);

@@ -4,6 +4,8 @@ import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import "./App.scss";
 import HomePage from "./pages/home/home";
 import AppStore from "./Store";
+import {Header} from './components/header/Header';
+import {SingleCountry} from './pages/singleCountry/SingleCountry';
 
 @inject("appStore")
 @observer
@@ -13,9 +15,10 @@ export default class App extends React.Component<{
   render() {
     return (
       <BrowserRouter>
+        <Header/>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route component={() => <Redirect to="/" />} />
+          <Route path="/countries/:alpha3Code" component={SingleCountry} />
         </Switch>
       </BrowserRouter>
     );

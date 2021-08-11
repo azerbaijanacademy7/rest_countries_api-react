@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 100vw;
+    padding: 30px 16px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+    margin-bottom: 25px;
+    .header_title{
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 20px;
+        margin: 0;
+    }
+    .dark_mode{
+        display: flex;
+        align-items: center;
+        .dark_mode_text{
+            font-size: 12px;
+            font-weight: 600;
+            margin: 0;
+            margin-left: 8px;
+        }
+    }
+}
